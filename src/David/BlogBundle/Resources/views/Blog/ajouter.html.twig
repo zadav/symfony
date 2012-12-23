@@ -1,0 +1,22 @@
+{% extends "DavidBlogBundle::layout.html.twig" %}
+
+{% block title %}
+	Ajouter un article - {{parent()}}
+{% endblock %}
+
+{% block davidblog_body %}
+	<h2>Ajouter un article</h2>
+
+	{% include "DavidBlogBundle:Blog:formulaire.html.twig" %}
+
+	<p>
+		Cet article sera ajouté directement
+	</p>
+
+	<p>
+		<a href="{{ path('davidblog_accueil') }}" class="btn">
+			<i class="icon-chevron-left"></i>
+			Retour à l'accueil
+		</a>
+	</p>
+{% endblock %}

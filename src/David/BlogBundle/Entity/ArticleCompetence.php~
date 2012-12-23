@@ -1,0 +1,31 @@
+<?php
+
+namespace David\BlogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * David\BlogBundle\Entity\ArticleCompetence
+ *
+ * @ORM\Entity
+ */
+class ArticleCompetence
+{
+
+    /**
+     * @ORM\Id
+     * @ORM\ManyToOne(targetEntity="David\BlogBundle\Entity\Article")
+     */
+    private $article;
+
+    /**
+     * @ORM\Id
+     * @ORM\ManyToOne(targetEntity="David\BlogBundle\Entity\Competence")
+     */
+    private $competence;
+
+    /**
+     * @ORM\Column()
+     */
+    private $niveau;
+}

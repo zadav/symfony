@@ -1,0 +1,31 @@
+davidblog_accueil :
+    pattern:  /{page}
+    defaults: { _controller: DavidBlogBundle:Blog:index, page: 1 }
+    requirements :
+        page : \d+        
+
+davidblog_voir :
+    pattern:  /article/{id}
+    defaults: { _controller: DavidBlogBundle:Blog:voir}
+    requirements : 
+        page : \d+
+
+davidblog_ajouter :
+    pattern:  /ajouter
+    defaults: { _controller: DavidBlogBundle:Blog:ajouter }
+
+davidblog_modifier :
+    pattern:  /modifier/{id}
+    defaults: { _controller: DavidBlogBundle:Blog:modifier }
+    requirements :
+        id : \d+     
+
+davidblog_supprimer :
+    pattern:  /supprimer/{id}
+    defaults: { _controller: DavidBlogBundle:Blog:supprimer }
+    requirements :
+        id : \d+
+
+davidblog_supprimer :
+    pattern:  /test
+    defaults: { _controller: DavidBlogBundle:Blog:test}
